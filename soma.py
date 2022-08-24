@@ -13,7 +13,11 @@ AGENDA['Maria'] = {
 
 def mostrar_contato():
     for contato in AGENDA:
-        print( AGENDA[contato] )
+        print(AGENDA[contato])
 
+def buscar_contato(contato):
+    print('Nome: ',contato)
+    print(AGENDA[contato])
 
-mostrar_contato();
+#mostrar_contato();
+buscar_contato('Maria');
