@@ -30,9 +30,37 @@ def incluir_editar_contato(contato, telefone, email, endereco):
     }
     print('>>> contato {} adcionado com sucesso'.format(contato))
 
-#mostrar_contato()
+def excluir_contato(contato):
+    AGENDA.pop(contato)
+    print('>>> contato {} excluído com sucesso'.format(contato))
 
-incluir_editar_contato('Maria','816223223','jaja@hotmail.com','rua alberto pereira')
-mostrar_contato()
+def menu():
+    print('1 para incluir')
+    print('2 para editar')
+    print('3 para excluit')
+    print('4 para buscar')
+    print('5 para listar')
+    print('0 para fechar')
 
-#buscar_contato('Maria');
+
+menu()
+opcao = input('escolha uma opção: ')
+
+if opcao == '5':
+    mostrar_contato()
+elif opcao == '4':
+    buscar_contato(input('Digite o nome do contato:'))
+elif opcao == '1' or opcao == '2':
+    contato = input('Digite o nome: ')
+    telefone = input('Digite o telefone: ')
+    email = input('Digite o email: ')
+    endereco = input('Digite o endereço: ')
+    incluir_editar_contato(contato, telefone, email, endereco)
+    mostrar_contato()
+elif opcao == '3':
+    excluir_contato(input('Digite o nome do contato: '))
+elif opcao == '0':
+    print('Fechando programa')
+else:
+    print('Opção invalida')
+
