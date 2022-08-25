@@ -22,7 +22,7 @@ def buscar_contato(contato):
     print('Email: ',AGENDA[contato]['email'])
     print('Endereço: ',AGENDA[contato]['endereco'])
 
-def incluir_contato(contato, telefone, email, endereco):
+def incluir_editar_contato(contato, telefone, email, endereco):
     AGENDA[contato] = {
         'telefone': telefone,
         'email': email,
@@ -30,8 +30,9 @@ def incluir_contato(contato, telefone, email, endereco):
     }
     print('>>> contato {} adcionado com sucesso'.format(contato))
 
-mostrar_contato()
-incluir_contato('emerson','816223223','jaja@hotmail.com','rua alberto pereira')
+#mostrar_contato()
+
+incluir_editar_contato('Maria','816223223','jaja@hotmail.com','rua alberto pereira')
 mostrar_contato()
 
 #buscar_contato('Maria');
